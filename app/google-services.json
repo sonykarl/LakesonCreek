@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "650671283462",
+    "project_id": "lakesoncreek",
+    "storage_bucket": "lakesoncreek.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:650671283462:android:13621da117cf199dce9287",
+        "android_client_info": {
+          "package_name": "com.example.lakesoncreek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "650671283462-s8jalhf5a42oqpkk6n5t1a65r96jvqng.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4o6WG9Q3EdHvyU8GNX_i5UYy40u3wCSM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "650671283462-s8jalhf5a42oqpkk6n5t1a65r96jvqng.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
