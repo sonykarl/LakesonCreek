@@ -19,6 +19,7 @@ class LogInFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         auth = FirebaseAuth.getInstance()
+        binding = FragmentLogInBinding.inflate(inflater,container,false)
         binding.loginbtn.setOnClickListener {
             var email = binding.emaillogin.text.toString()
             var password = binding.passwordlogin.text.toString()

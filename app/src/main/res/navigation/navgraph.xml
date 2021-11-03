@@ -3,11 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navgraph"
-    app:startDestination="@id/signUpFragment">
+    app:startDestination="@id/logInFragment">
 
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.example.lakesoncreek.app.authentication.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" />
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.lakesoncreek.app.authentication.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" />
 </navigation>
