@@ -1,4 +1,4 @@
-package com.example.lakesoncreek.app
+package com.example.lakesoncreek.app.authentication
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
