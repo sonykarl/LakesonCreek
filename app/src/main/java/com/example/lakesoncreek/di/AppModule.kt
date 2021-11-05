@@ -18,5 +18,10 @@ object AppModule {
     fun providelakesonrepo(): LakesonRepository{
         return LakesonRepositoryImp()
     }
+    @Provides
+    @Singleton
+    fun provideimplentationrepo(): LakesonRepositoryImp{
+        return LakesonRepositoryImp()
+    }
 
 }
