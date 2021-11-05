@@ -10,8 +10,12 @@ class LogInUser {
         var auth = FirebaseAuth.getInstance()
 
         GlobalScope.launch {
-            auth.signInWithEmailAndPassword(email, password).addOnSuccessListener {
-                navigation
+            auth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
+                    task ->
+                if (task.isSuccessful){
+                    navigation
+                }
+
             }
         }
 
