@@ -7,18 +7,14 @@ import com.example.lakesoncreek.Domain.usescase.Authentication.SignUpUser
 
 
 class LakesonRepositoryImp(): LakesonRepository{
-    lateinit var email: String
-    lateinit var password: String
-    lateinit var navigation: Navigation
 
-    override suspend fun loginuser() {
+    override suspend fun loginuser(email: String, password: String, navigation: Unit) {
         val login = LogInUser()
         return login.loginUser(email, password, navigation)
-
     }
 
-    override suspend fun signupuser() {
-        val signUpUser = SignUpUser()
-        return signUpUser.signUpUser(email, password, navigation)
+    override suspend fun signupuser(email: String, password: String, navigation: Unit) {
+        val signup = SignUpUser()
+        return signup.signUpUser(email, password, navigation)
     }
 }

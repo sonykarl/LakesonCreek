@@ -7,7 +7,7 @@ import kotlinx.coroutines.launch
 
 class LogInUser {
 
-    suspend fun loginUser(email: String,password: String,navigation: Navigation){
+    fun loginUser(email: String,password: String,navigation: Unit){
         var auth = FirebaseAuth.getInstance()
 
         auth.signInWithEmailAndPassword(email, password).addOnCompleteListener {

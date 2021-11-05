@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.example.lakesoncreek.R
 import com.example.lakesoncreek.databinding.FragmentLogInBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -25,9 +27,10 @@ class LogInFragment : Fragment() {
 
         binding.loginbtn.setOnClickListener {
 
-            viewModel.repositoryImp.email = binding.emaillogin.text.toString()
-            viewModel.repositoryImp.password = binding.passwordlogin.text.toString()
-            viewModel.logInUser()
+            val email = binding.emaillogin.text.toString()
+            val password = binding.passwordlogin.text.toString()
+            val navigation = findNavController().navigate(R.id.action_logInFragment_to_homepageFragment)
+            viewModel.loginUser(email,password,navigation)
 
         }
         // Inflate the layout for this fragment
