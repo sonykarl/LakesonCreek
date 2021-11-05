@@ -11,7 +11,9 @@ import androidx.navigation.fragment.findNavController
 import com.example.lakesoncreek.R
 import com.example.lakesoncreek.databinding.FragmentLogInBinding
 import com.google.firebase.auth.FirebaseAuth
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class LogInFragment : Fragment() {
 
     lateinit var binding: FragmentLogInBinding
