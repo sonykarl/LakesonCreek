@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.lakesoncreek.R
 import com.example.lakesoncreek.databinding.FragmentProfileUpdateBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -17,7 +19,8 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class ProfileUpdateFragment : Fragment() {
-    lateinit var auth: FirebaseAuth
+
+    lateinit var viewModel: ProfileUpdateViewModel
     lateinit var binding: FragmentProfileUpdateBinding
 
     override fun onCreateView(
@@ -26,27 +29,18 @@ class ProfileUpdateFragment : Fragment() {
     ): View? {
 
         binding = FragmentProfileUpdateBinding.inflate(inflater,container,false)
+        viewModel = ViewModelProvider(this).get(ProfileUpdateViewModel::class.java)
+
+        var fullname = binding.usernameupdate.text.toString()
+        var photo = Uri.parse("https://www.istockphoto.com/photo/headshot-of-44-year-old-mixed-race-man-in-casual-polo-shirt-gm1264106963-370146003?utm_source=unsplash&utm_medium=affiliate&utm_campaign=srp_photos_top&utm_content=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fface&utm_term=face%3A%3Asearch-aggressive-affiliates-v2%3Aa")
+        var navigation = findNavController().navigate(R.id.action_profileUpdateFragment_to_homepageFragment)
+
         binding.button.setOnClickListener {
-            updateProfile()
+            viewModel.updateProfile(fullname,photo,navigation)
         }
-        
-        auth = FirebaseAuth.getInstance()
+
         // Inflate the layout for this fragment
         return binding.root
     }
-    private fun updateProfile(){
-        auth.currentUser?.let {user ->
-            val username = binding.usernameupdate.text.toString()
-            val photoURI = Uri.parse("android.resource://com.example.lakesoncreek/${R.drawable.ic_launcher_background}")
 
-            val profileupdate = UserProfileChangeRequest.Builder()
-                .setDisplayName(username)
-                .setPhotoUri(photoURI)
-                .build()
-
-            CoroutineScope(Dispatchers.IO).launch {
-                user.updateProfile(profileupdate)
-            }
-        }
-    }
 }
