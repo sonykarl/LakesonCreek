@@ -7,4 +7,5 @@ interface LakesonRepository {
     suspend fun loginuser(email: String, password: String, navigation: Unit)
     suspend fun signupuser(email: String, password: String, navigation: Unit)
     suspend fun updateProfile(fullname:String, photo: Uri?, navigation: Unit)
+    suspend fun retrieveDrinks()
 }
