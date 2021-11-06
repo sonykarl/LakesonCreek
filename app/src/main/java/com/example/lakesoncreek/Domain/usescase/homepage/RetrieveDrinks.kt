@@ -6,15 +6,18 @@ import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
 
 class RetrieveDrinks {
+
     fun getDrinks(){
 
-        val getdrinkscollectionref = Firebase.firestore.collection("Drinks").get()
+        val drinklist = mutableListOf<Drinks>()
+        Firebase.firestore.collection("Drinks").get()
             .addOnSuccessListener { result ->
                 for (document in result) {
                     val drinks = document.toObject<Drinks>()
+                    drinklist.add(drinks)
                 }
-            }
 
+            }
 
     }
 
