@@ -5,7 +5,6 @@ import com.example.lakesoncreek.Domain.repository.LakesonRepository
 import com.example.lakesoncreek.Domain.usescase.Authentication.ForgotPasswordUsecase
 import com.example.lakesoncreek.Domain.usescase.Authentication.LogInUser
 import com.example.lakesoncreek.Domain.usescase.Authentication.SignUpUser
-import com.example.lakesoncreek.Domain.usescase.Authentication.UpdateUserProfile
 import com.example.lakesoncreek.Domain.usescase.homepage.RetrieveDrinks
 
 
@@ -16,15 +15,11 @@ class LakesonRepositoryImp(): LakesonRepository{
         return login.loginUser(email, password, navigation)
     }
 
-    override suspend fun signupuser(email: String, password: String, navigation: Unit) {
+    override suspend fun signupuser(email: String, password: String, navigation: Unit,firstName:String,lastName:String,mobile:Long) {
         val signup = SignUpUser()
-        return signup.signUpUser(email, password, navigation)
+        return signup.signUpUser(email,password,navigation,firstName,lastName,mobile)
     }
 
-    override suspend fun updateProfile(fullname: String, photo: Uri?, navigation: Unit) {
-        val updateUserProfile = UpdateUserProfile()
-        return updateUserProfile.updateUser(fullname, photo, navigation)
-    }
 
     override suspend fun retrieveDrinks() {
         val retrieveDrinks = RetrieveDrinks()

@@ -12,9 +12,9 @@ class SignUpViewModel @Inject constructor(
     private val repositoryImp: LakesonRepositoryImp
     ): ViewModel() {
 
-        fun signUpuser(email:String, password:String,navigation: Unit){
+        fun signUpuser(email: String, password: String, navigation: Unit,firstName:String,lastName:String,mobile:Long){
             viewModelScope.launch {
-                repositoryImp.signupuser(email, password, navigation)
+                repositoryImp.signupuser(email, password, navigation,firstName,lastName,mobile)
             }
         }
 }

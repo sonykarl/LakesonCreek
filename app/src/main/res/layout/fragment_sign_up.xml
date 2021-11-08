@@ -10,8 +10,8 @@
         android:id="@+id/EmailSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="239dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="208dp"
         android:ems="10"
         android:hint="email"
         android:inputType="textEmailAddress"
@@ -24,7 +24,7 @@
         android:id="@+id/passwordsignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="password"
         android:inputType="textPassword"
@@ -37,9 +37,35 @@
         android:id="@+id/SignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="46dp"
-        android:text="Button"
+        android:layout_marginTop="32dp"
+        android:text="sign up"
         app:layout_constraintEnd_toEndOf="@+id/passwordsignup"
+        app:layout_constraintHorizontal_bias="0.396"
         app:layout_constraintStart_toStartOf="@+id/passwordsignup"
         app:layout_constraintTop_toBottomOf="@+id/passwordsignup" />
+
+    <EditText
+        android:id="@+id/firstname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/lastname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/firstname"
+        app:layout_constraintTop_toBottomOf="@+id/firstname" />
 </androidx.constraintlayout.widget.ConstraintLayout>
