@@ -2,6 +2,7 @@ package com.example.lakesoncreek.data.repository
 
 import android.net.Uri
 import com.example.lakesoncreek.Domain.repository.LakesonRepository
+import com.example.lakesoncreek.Domain.usescase.Authentication.ForgotPasswordUsecase
 import com.example.lakesoncreek.Domain.usescase.Authentication.LogInUser
 import com.example.lakesoncreek.Domain.usescase.Authentication.SignUpUser
 import com.example.lakesoncreek.Domain.usescase.Authentication.UpdateUserProfile
@@ -28,5 +29,10 @@ class LakesonRepositoryImp(): LakesonRepository{
     override suspend fun retrieveDrinks() {
         val retrieveDrinks = RetrieveDrinks()
         return retrieveDrinks.getDrinks()
+    }
+
+    override suspend fun forgotPassword(email: String, navigation: Unit) {
+        val forgotPassword = ForgotPasswordUsecase()
+        return forgotPassword.resetpassword(email, navigation)
     }
 }

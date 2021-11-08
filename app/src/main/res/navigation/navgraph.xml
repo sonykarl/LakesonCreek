@@ -28,6 +28,15 @@
         <action
             android:id="@+id/action_logInFragment_to_homepageFragment"
             app:destination="@id/homepageFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_forgotPasswordFragment2"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_homepageFragment3"
+            app:destination="@id/homepageFragment" />
     </fragment>
     <fragment
         android:id="@+id/homepageFragment"
@@ -46,5 +55,14 @@
         <action
             android:id="@+id/action_profileUpdateFragment_to_homepageFragment"
             app:destination="@id/homepageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.lakesoncreek.app.authentication.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
     </fragment>
 </navigation>
