@@ -5,6 +5,7 @@ data class User(
     val firstName: String = "",
     val lastName: String = "",
     val image: String = "",
-    val mobile: Long = "",
+    val mobile: Long = 0,
+    val gender: String = "",
     val profileCompleted: Int = 0
 )
