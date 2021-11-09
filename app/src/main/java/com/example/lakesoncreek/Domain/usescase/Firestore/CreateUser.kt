@@ -9,7 +9,7 @@ class CreateUser {
     fun createUser(userinfo:User,navigation: Unit){
 
         val db = FirebaseFirestore.getInstance()
-        db.collection("users")
+        db.collection("Users")
             .document(userinfo.id)
             .set(userinfo)
             .addOnCompleteListener { task ->
