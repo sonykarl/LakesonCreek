@@ -3,7 +3,7 @@ package com.example.lakesoncreek.Domain.usescase.Firestore
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.ktx.Firebase
 
-class getCurrentUser {
+class GetUserDetails {
 
     fun getCurrentUserID(): String {
         val currentUser = FirebaseAuth.getInstance().currentUser

@@ -23,7 +23,7 @@ class SignUpUser {
                     lastName = lastName,
                     email = email
                 )
-               CreateUser().createUser(user,navigation)
+                CreateUser().createUser(user,navigation)
             }
         }
     }

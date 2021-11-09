@@ -6,12 +6,12 @@ import com.google.firebase.firestore.SetOptions
 
 class CreateUser {
 
-    fun createUser(userinfo:User,navigation: Unit){
+    private val db = FirebaseFirestore.getInstance()
 
-        val db = FirebaseFirestore.getInstance()
-        db.collection("Users")
+    fun createUser(userinfo:User,navigation: Unit){
+        db.collection("users")
             .document(userinfo.id)
-            .set(userinfo)
+            .set(userinfo, SetOptions.merge())
             .addOnCompleteListener { task ->
                 if (task.isSuccessful){
                     navigation
