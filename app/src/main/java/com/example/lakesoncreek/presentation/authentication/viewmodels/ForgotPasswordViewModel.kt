@@ -1,4 +1,4 @@
-package com.example.lakesoncreek.app.authentication
+package com.example.lakesoncreek.app.authentication.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
