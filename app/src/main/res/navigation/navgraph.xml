@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navgraph"
-    app:startDestination="@id/forgotPasswordFragment">
+    app:startDestination="@id/signUpFragment">
 
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.example.lakesoncreek.app.authentication.SignUpFragment"
+        android:name="com.example.lakesoncreek.presentation.authentication.fragments.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/logInFragment"
-        android:name="com.example.lakesoncreek.app.authentication.LogInFragment"
+        android:name="com.example.lakesoncreek.presentation.authentication.fragments.LogInFragment"
         android:label="fragment_log_in"
         tools:layout="@layout/fragment_log_in" >
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/homepageFragment"
-        android:name="com.example.lakesoncreek.app.homepage.HomepageFragment"
+        android:name="com.example.lakesoncreek.presentation.homepage.HomepageFragment"
         android:label="fragment_homepage"
         tools:layout="@layout/fragment_homepage" >
         <action
@@ -49,7 +49,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileUpdateFragment"
-        android:name="com.example.lakesoncreek.app.authentication.ProfileUpdateFragment"
+        android:name="com.example.lakesoncreek.presentation.authentication.ProfileUpdateFragment"
         android:label="fragment_profile_update"
         tools:layout="@layout/fragment_profile_update" >
         <action
@@ -58,7 +58,7 @@
     </fragment>
     <fragment
         android:id="@+id/forgotPasswordFragment"
-        android:name="com.example.lakesoncreek.app.authentication.ForgotPasswordFragment"
+        android:name="com.example.lakesoncreek.presentation.authentication.fragments.ForgotPasswordFragment"
         android:label="fragment_forgot_password"
         tools:layout="@layout/fragment_forgot_password" >
         <action

@@ -15,9 +15,9 @@ class LakesonRepositoryImp(): LakesonRepository{
         return login.loginUser(email, password, navigation)
     }
 
-    override suspend fun signupuser(email: String, password: String, navigation: Unit,firstName:String,lastName:String,mobile:Long) {
+    override suspend fun signupuser(email: String, password: String, navigation: Unit,firstName:String,lastName:String) {
         val signup = SignUpUser()
-        return signup.signUpUser(email,password,navigation,firstName,lastName,mobile)
+        return signup.signUpUser(email,password,navigation,firstName,lastName)
     }
 
 

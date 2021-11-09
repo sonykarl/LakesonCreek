@@ -1,8 +1,7 @@
-package com.example.lakesoncreek.app.authentication.viewmodels
+package com.example.lakesoncreek.presentation.authentication.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import androidx.navigation.Navigation
 import com.example.lakesoncreek.data.repository.LakesonRepositoryImp
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch

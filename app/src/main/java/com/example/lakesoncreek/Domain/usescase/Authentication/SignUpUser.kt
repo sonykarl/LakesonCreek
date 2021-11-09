@@ -8,15 +8,16 @@ import com.google.firebase.auth.FirebaseUser
 
 class SignUpUser {
 
-    fun signUpUser(email:String, password:String,navigation: Unit,firstName:String,lastName:String,mobile:Long){
+    fun signUpUser(email:String, password:String,navigation: Unit,firstName:String,lastName:String){
 
         var auth = FirebaseAuth.getInstance()
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener { task ->
+
             if(task.isSuccessful){
                 val firebaseUser: FirebaseUser = task.result!!.user!!
-                val user = User(firebaseUser.uid,firstName, lastName, email,mobile)
-                CreateUser().createUser(user)
-                navigation
+
+                val user = User(firebaseUser.uid,firstName,lastName,email)
+                CreateUser().createUser(user,navigation)
             }
         }
     }

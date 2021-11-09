@@ -1,4 +1,4 @@
-package com.example.lakesoncreek.app.authentication.fragments
+package com.example.lakesoncreek.presentation.authentication.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.lakesoncreek.R
-import com.example.lakesoncreek.app.authentication.viewmodels.ForgotPasswordViewModel
+import com.example.lakesoncreek.presentation.authentication.viewmodels.ForgotPasswordViewModel
 import com.example.lakesoncreek.databinding.FragmentForgotPasswordBinding
 import dagger.hilt.android.AndroidEntryPoint
 

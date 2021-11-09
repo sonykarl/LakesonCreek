@@ -4,27 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".app.authentication.SignUpFragment">
+    tools:context=".presentation.authentication.fragments.SignUpFragment">
 
     <EditText
         android:id="@+id/EmailSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="208dp"
+        android:layout_marginTop="35dp"
         android:ems="10"
         android:hint="email"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/lastname"
+        app:layout_constraintTop_toBottomOf="@+id/lastname"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/passwordsignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="25dp"
         android:ems="10"
         android:hint="password"
         android:inputType="textPassword"
@@ -37,10 +36,9 @@
         android:id="@+id/SignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="24dp"
         android:text="sign up"
-        app:layout_constraintEnd_toEndOf="@+id/passwordsignup"
-        app:layout_constraintHorizontal_bias="0.396"
         app:layout_constraintStart_toStartOf="@+id/passwordsignup"
         app:layout_constraintTop_toBottomOf="@+id/passwordsignup" />
 
@@ -48,8 +46,8 @@
         android:id="@+id/firstname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="123dp"
         android:ems="10"
         android:hint="First Name"
         android:inputType="textPersonName"
@@ -61,11 +59,12 @@
         android:id="@+id/lastname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="27dp"
         android:ems="10"
         android:hint="Last Name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="@+id/firstname"
         app:layout_constraintTop_toBottomOf="@+id/firstname" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.lakesoncreek.app.homepage
+package com.example.lakesoncreek.presentation.homepage
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

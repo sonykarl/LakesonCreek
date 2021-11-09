@@ -1,4 +1,4 @@
-package com.example.lakesoncreek.app.authentication.viewmodels
+package com.example.lakesoncreek.presentation.authentication.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -13,8 +13,10 @@ class SignUpViewModel @Inject constructor(
     ): ViewModel() {
 
         fun signUpuser(email: String, password: String, navigation: Unit,firstName:String,lastName:String){
+
             viewModelScope.launch {
                 repositoryImp.signupuser(email, password, navigation,firstName,lastName)
             }
+
         }
 }
